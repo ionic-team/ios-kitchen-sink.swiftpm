@@ -8,13 +8,13 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "About Me",
+    name: "iOS Kitchen Sink",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "About Me",
+            name: "iOS Kitchen Sink",
             targets: ["App"],
             displayVersion: "1.0",
             bundleVersion: "1",
