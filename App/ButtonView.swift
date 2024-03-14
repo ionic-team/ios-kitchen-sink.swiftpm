@@ -54,11 +54,10 @@ struct ButtonView: View {
                 .controlSize(.large)
                 .buttonBorderShape(.roundedRectangle)
               
-              Button("Circle") {}
+              Button("Rectangular") {}
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
-                .clipShape(Circle())
-             
+                .buttonBorderShape(.roundedRectangle(radius: 0))
             }
           }
           
@@ -103,10 +102,54 @@ struct ButtonView: View {
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
             }
+            HStack {
+              // Mini Icon
+              Button { }
+              label: {
+                HStack {
+                  Image(systemName: "apple.logo")
+                }
+              }
+              .buttonStyle(.borderedProminent)
+              .controlSize(.mini)
+              .clipShape(Circle())
+                
+              // Small Icon
+              Button { }
+              label: {
+                HStack {
+                  Image(systemName: "apple.logo")
+                }
+              }
+              .buttonStyle(.borderedProminent)
+              .controlSize(.small)
+              .clipShape(Circle())
+                
+              // Regular Icon
+              Button { }
+              label: {
+                HStack {
+                  Image(systemName: "apple.logo")
+                }
+              }
+              .buttonStyle(.borderedProminent)
+              .controlSize(.regular)
+              .clipShape(Circle())
+                
+              // Large Icon
+              Button { }
+              label: {
+                HStack {
+                  Image(systemName: "apple.logo")
+                }
+              }
+              .buttonStyle(.borderedProminent)
+              .controlSize(.large)
+              .clipShape(Circle())
+            }
           }
           
           Divider()
-          
           
           // Shapes + Sizes
           VStack(spacing: 10) {
@@ -162,35 +205,20 @@ struct ButtonView: View {
           VStack(spacing: 10) {
             Text("Button Icons")
               .bold()
-            
+
             HStack {
-              // Top Icon
+              // Icon Only
               Button { }
-            label: {
-              VStack {
-                Image(systemName: "apple.logo")
-                Text("Button")
-              }
-            }
-            .buttonStyle(.borderedProminent)
-              
-              // Bottom Icon
-              Button {
-                
-              } label: {
-                VStack {
-                  Text("Button")
+              label: {
+                HStack {
                   Image(systemName: "apple.logo")
                 }
               }
               .buttonStyle(.borderedProminent)
-            }
-            
-            HStack {
+
               // Left Icon
-              Button {
-                
-              } label: {
+              Button { }
+              label: {
                 HStack {
                   Image(systemName: "apple.logo")
                   Text("Button")
@@ -199,9 +227,8 @@ struct ButtonView: View {
               .buttonStyle(.borderedProminent)
               
               // Right Icon
-              Button {
-                
-              } label: {
+              Button { }
+              label: {
                 HStack {
                   Text("Button")
                   Image(systemName: "apple.logo")
@@ -209,63 +236,27 @@ struct ButtonView: View {
               }
               .buttonStyle(.borderedProminent)
             }
-            
+
             HStack {
-              // Mini Icon
+              // Top Icon
               Button { }
-            label: {
-              HStack {
-                Image(systemName: "apple.logo")
-                
+              label: {
+                VStack {
+                  Image(systemName: "apple.logo")
+                  Text("Button")
+                }
               }
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.mini)
-            .clipShape(Circle())
+              .buttonStyle(.borderedProminent)
               
-              // Small Icon
+              // Bottom Icon
               Button { }
-            label: {
-              HStack {
-                Image(systemName: "apple.logo")
-                
+              label: {
+                VStack {
+                  Text("Button")
+                  Image(systemName: "apple.logo")
+                }
               }
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.small)
-            .clipShape(Circle())
-              
-              // Regular Icon
-              Button { }
-            label: {
-              HStack {
-                Image(systemName: "apple.logo")
-              }
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.regular)
-              
-              // Large Icon
-              Button { }
-            label: {
-              HStack {
-                Image(systemName: "apple.logo")
-              }
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-              
-              // Large Icon
-              Button { }
-            label: {
-              HStack {
-                Image(systemName: "apple.logo")
-              }
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .buttonBorderShape(.capsule)
-            .clipShape(Circle())
+              .buttonStyle(.borderedProminent)
             }
           }
           
