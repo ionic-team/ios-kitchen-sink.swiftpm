@@ -32,6 +32,9 @@ struct ContentView: View {
         NavigationLink("Tabs") {
           TabsView()
         }
+        NavigationLink("Toolbar") {
+          ToolbarView()
+        }
         .navigationTitle("Kitchen Sink")
       }
     }
