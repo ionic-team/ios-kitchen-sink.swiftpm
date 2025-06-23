@@ -29,6 +29,9 @@ struct ContentView: View {
         NavigationLink("Segment") {
           SegmentView()
         }
+        NavigationLink("Sheet Modal View") {
+          SheetModalView()
+        }
         NavigationLink("Tabs") {
           TabsView()
         }
